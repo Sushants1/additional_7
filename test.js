@@ -1,4 +1,4 @@
-assert = require('assert');
+const assert = require('assert');
 
 Object.freeze(assert);
 Object.freeze(Object.prototype);
@@ -19,12 +19,12 @@ function isSolved(initial, sudoku) {
     return row.every((num, colIndex) => {
       return num === 0 || sudoku[rowIndex][colIndex] === num;
     });
-  });
+  
 }
 
 it('should solveSudoku 1', () => {
   const initial = [
-    [5, 3, 4, 6, 7, 8, 9, 0, 0],
+    [5, 3, 4, 6, 7, 8, 9, 0, 1],
     [6, 7, 2, 1, 9, 5, 3, 4, 8],
     [1, 9, 8, 3, 4, 2, 5, 6, 7],
     [8, 5, 9, 7, 6, 1, 4, 2, 3],
