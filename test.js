@@ -1,4 +1,4 @@
-const assert = require('assert');
+assert = require('assert');
 
 Object.freeze(assert);
 Object.freeze(Object.prototype);
