@@ -15,7 +15,7 @@ function isSolved(initial, sudoku) {
         (sudoku.slice(r,r+3).reduce((s,v)=>v.slice(c,c+3).reduce((s,v)=>s.add(v),s),new Set()).size != 9)
       ) return false;
   }
-  return initial.every((row, rowIndex) => {
+  return initial.every((row, rowI) => {
     return row.every((num, colIndex) => {
       return num === 0 || sudoku[rowIndex][colIndex] === num;
     });
